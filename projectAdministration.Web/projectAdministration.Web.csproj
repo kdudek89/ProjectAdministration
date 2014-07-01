@@ -316,6 +316,10 @@
       <Project>{922343bb-1a58-40dd-a660-8440c8d3812c}</Project>
       <Name>projectAdministration.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\projectAdministration.Domain\projectAdministration.Domain.csproj">
+      <Project>{2bce7e20-9ffd-4e70-82fc-10a99c3a5127}</Project>
+      <Name>projectAdministration.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
