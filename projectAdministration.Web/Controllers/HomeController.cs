@@ -5,30 +5,33 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using projectAdministration.Domain;
+using projectAdministration.Data.Interfaces;
 
 namespace projectAdministration.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IUserRepository userRepository = null;
+        private readonly IUnitOfWork uow = null;
+        private readonly IRepository<User> userRepository = null;
  
         public HomeController()
         {
-            //this.repository = new GenericRepository<User>();
-            this.userRepository = new UserRepository();
+            uow = new UnitOfWork();
+            userRepository = new Repository<User>(uow);
         }
- 
-        public HomeController(IUserRepository userRepository)
+
+        public HomeController(IUnitOfWork uow, IRepository<User> userRepository)
         {
-             this.userRepository = userRepository;
+            this.uow = uow;
+            this.userRepository = userRepository;
         }
 
         public ActionResult Index()
         {
             
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-            var allUsers = userRepository.GetUsers();
-            
+            var allUsers = userRepository.All.Where(e => e.Name=="Kamil");
+
             return View(allUsers);
         }
 
@@ -44,6 +47,14 @@ namespace projectAdministration.Web.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (userRepository != null)
+                userRepository.Dispose();
+            if (uow != null)
+                uow.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

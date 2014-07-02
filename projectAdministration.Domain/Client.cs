@@ -8,13 +8,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class Client
+    public class Client :IIdentifiable
     {
         public Client()
         {
             Projects = new List<Project>();
         }
-        public int ClientId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
         //Each Client can have multiple client feedbacks

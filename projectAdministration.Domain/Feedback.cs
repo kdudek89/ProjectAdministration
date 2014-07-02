@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class Feedback
+    public class Feedback : IIdentifiable
     {
         public Feedback() { }
         public int Id { get; set; }

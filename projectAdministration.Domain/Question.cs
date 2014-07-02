@@ -8,9 +8,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class Question
+    public class Question : IIdentifiable
     {
-        public int QuestionId { get; set; }
+        public int Id { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]

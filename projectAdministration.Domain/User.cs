@@ -9,12 +9,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class User
+    public class User : IIdentifiable
     {
         public User()
         {
         }
-        public int UserId { get; set; }
+        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]

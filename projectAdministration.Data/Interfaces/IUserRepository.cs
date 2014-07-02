@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using projectAdministration.Domain;
+using projectAdministration.Data.Interfaces;
 
 namespace projectAdministration.Data
 {
-   public interface IUserRepository  : IDisposable
+   public interface IUserRepository  : IRepository<User>
     { 
+       //@Darek tutaj możesz dodać cutomowe metody
+       //Wystarczy ten interfejs dać do klasy RepositoryUser
         IEnumerable<User> GetUsers();
-        User GetUserByID(int UserId);
-        void InsertUser(User user);
-        void DeleteUser(int UserId);
-        void UpdateUser(User user);
-        void Save();
     }
 }

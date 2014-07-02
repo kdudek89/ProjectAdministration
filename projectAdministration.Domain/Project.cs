@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace projectAdministration.Domain
 {
-    public class Project
+    public class Project : IIdentifiable
     {
         public Project() {
             Feedbacks = new List<Feedback>();
@@ -15,7 +15,7 @@ namespace projectAdministration.Domain
             this.Users = new HashSet<User>();
  
         }
-        public int ProjectId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string ShortName { get; set; }

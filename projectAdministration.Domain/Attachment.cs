@@ -8,8 +8,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class Attachment
+    public class Attachment :IIdentifiable
     {
+    
         public Attachment() { }
         public int Id { get; set; }
         public string Name { get; set; }

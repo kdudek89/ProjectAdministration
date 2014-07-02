@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class Category
+    public class Category : IIdentifiable
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class Review
+    public class Review : IIdentifiable
     {
         public Review()
         {

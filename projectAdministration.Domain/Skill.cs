@@ -8,14 +8,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class Skill
+    public class Skill : IIdentifiable
     {
         public Skill()
         {
             this.Users = new HashSet<User>();
         }
         [Key]
-        public int  SkillId { get; set; }
+        public int  Id { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
         //skill Category 
