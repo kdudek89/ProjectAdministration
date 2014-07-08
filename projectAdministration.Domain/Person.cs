@@ -9,9 +9,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace projectAdministration.Domain
 {
-    public class User : IIdentifiable
+    public class People : IIdentifiable
     {
-        public User()
+        public People()
         {
         }
         public int Id { get; set; }

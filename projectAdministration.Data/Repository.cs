@@ -16,6 +16,7 @@ namespace projectAdministration.Data
         {
             context = uow.Context as Context;
         }
+
         public IQueryable<T> All
         {
             get
@@ -23,10 +24,12 @@ namespace projectAdministration.Data
                 return context.Set<T>();
             }
         }
+
         public T Find(int id)
         {
             return context.Set<T>().Find(id);
         }
+
         public void Insert(T item)
         {
             context.Entry(item).State = EntityState.Added;

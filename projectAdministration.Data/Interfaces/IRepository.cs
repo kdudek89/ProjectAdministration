@@ -14,5 +14,9 @@ namespace projectAdministration.Data.Interfaces
         void Insert(T entity);
         void Update(T entity);
         void Delete(int id);
+
+        //Rewrite in the future Find to a paging method 
+        //depends on the structure of the application
+        //Make a custom generic paging method
     }
 }

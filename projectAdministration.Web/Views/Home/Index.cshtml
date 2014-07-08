@@ -1,4 +1,5 @@
-﻿@model IQueryable<projectAdministration.Domain.User>
+﻿@*@model IEnumerable<projectAdministration.Web.Models.PeopleDTO>*@
+@model projectAdministration.Web.Models.PeopleDTO
 @{
     ViewBag.Title = "Home Page";
 }
@@ -13,13 +14,13 @@
         </section>
 }
 <h2>Users</h2>
-@foreach(var item in Model)
+@*@foreach(var item in Model)
 {
-    <div>
-        <h4>Name:@item.Name</h4>
-        <h4>LastName:@item.LastName</h4> 
-        <h5>email: @item.Email</h5>
+    *@<div>
+        <h4>Name:@Model.Name</h4>
+        <h4>LastName:@Model.LastName</h4> 
+        <h5>email: @Model.Email</h5>
         <hr />  
     </div>
     
-}
+@*}*@

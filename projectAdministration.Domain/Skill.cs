@@ -12,7 +12,7 @@ namespace projectAdministration.Domain
     {
         public Skill()
         {
-            this.Users = new HashSet<User>();
+            this.Users = new HashSet<People>();
         }
         [Key]
         public int  Id { get; set; }
@@ -22,7 +22,7 @@ namespace projectAdministration.Domain
         public int SkillCategoryId { get; set; }
         public virtual SkillCategory SkillCategory { get; set; } 
         //Skill to user
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<People> Users { get; set; }
 
 
         //Skill Characterisitics a sepearate table

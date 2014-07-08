@@ -12,7 +12,7 @@ namespace projectAdministration.Domain
             Feedbacks = new List<Feedback>();
             Attachments = new List<Attachment>();
             Reviews = new List<Review>();
-            this.Users = new HashSet<User>();
+            this.Users = new HashSet<People>();
  
         }
         public int Id { get; set; }
@@ -25,7 +25,7 @@ namespace projectAdministration.Domain
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
         //User
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<People> Users { get; set; }
         //FeedBack
         public virtual ICollection<Feedback> Feedbacks { get; set; }
         //Attachment

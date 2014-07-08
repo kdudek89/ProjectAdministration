@@ -8,10 +8,10 @@ using projectAdministration.Data.Interfaces;
 
 namespace projectAdministration.Data
 {
-   public interface IUserRepository  : IRepository<User>
+   public interface IUserRepository  : IRepository<People>
     { 
        //@Darek tutaj możesz dodać cutomowe metody
        //Wystarczy ten interfejs dać do klasy RepositoryUser
-        IEnumerable<User> GetUsers();
+        IEnumerable<People> GetUsers();
     }
 }

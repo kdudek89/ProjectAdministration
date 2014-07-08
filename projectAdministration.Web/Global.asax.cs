@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AutoMapper;
+using projectAdministration.Web.App_Start;
 
 namespace projectAdministration.Web
 {
@@ -17,7 +19,7 @@ namespace projectAdministration.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            DtoMapperConfig.CreateMaps();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

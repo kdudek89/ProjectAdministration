@@ -18,7 +18,7 @@ namespace projectAdministration.Data
      public Context(): base("DBConnection") {} 
 
      public DbSet<Client> Clients { get; set; }
-     public DbSet<User> Users { get; set; }
+     public DbSet<People> Peoples { get; set; }
      public DbSet<Project> Projects { get; set; }
      public DbSet<Category> Categorys { get; set; }
      public DbSet<Question> Questions { get; set; }

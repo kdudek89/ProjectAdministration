@@ -58,7 +58,7 @@
     <Compile Include="Review.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="SkillCategory.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Person.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
