@@ -23,7 +23,6 @@ namespace projectAdministration.Data
      public DbSet<Category> Categorys { get; set; }
      public DbSet<Question> Questions { get; set; }
      public DbSet<Feedback> Feedbacks { get; set; }
-     public DbSet<Skill> Skills { get; set; }
      public DbSet<Review> Reviews { get; set; }
      public DbSet<SkillCategory> SkillCategorys { get; set; }
      public DbSet<Attachment> Attachments { get; set; }
